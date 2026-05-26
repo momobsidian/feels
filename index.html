@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Text Feels</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'CustomFont';
+      src: url('font.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    body {
+      background: #000000;
+      color: #ffffff;
+      font-family: 'CustomFont';
+      font-size: 20px;
+      min-height: 100vh;
+      background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('image.jpg?v=3');
+      background-size: 100% auto; /* fit width */
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-attachment: fixed;
+      overflow-y: auto;
+    }
+  
+    .content { padding: 16px; box-sizing: border-box; }
+    p { margin: 0 0 14px; color: #f7f7f7; }
+    .content p:last-child { margin-bottom: 0; }
+    @keyframes blink {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+    .cursor {
+      display: inline-block;
+      width: 1px;
+      height: 1em;
+      background: #f7f7f7;
+      vertical-align: -0.2em;
+      margin-left: 2px;
+      animation: blink 1s step-end infinite;
+    }
+    @media (max-width: 600px) { p { font-size: 18px; } }
+  </style>
+  <!-- Ensure font.ttf is in the same directory as this file -->
+  <!-- If serving over a server, keep the relative path the same -->
+  
+  </head>
+  <body>
+  <div class="content">
+    <p>৪ সেপ্টেম্বর ২০২৫, রাত ১০:৪৩:৪৫ এই চাহনি কতটা ভয়ংকর ……। যেন নিরব আগুন । এই মনটায় আগুনটা স্পর্শ করলো । -১০০ ডিগ্রির তাপমাত্রার বরফ দেয়া মাত্রই ০.১০০ সেকেন্ড এই বরফ উধাউ। বরফকে জিজ্ঞাস করলাম যাস কোথায়? বলে আমার সবচেয়ে  বেশি দেখা আগুন গুলোর মধ্যে এটাই সেরা। এটা কেমন আগুন আমি জানি না আমি আগুন নিভাই অজানা কিছু নয়, কি জ্বালা কওতো কেমনডা লাগে, আগুনের মত গরম, উত্তপ্ত, যন্ত্রনাদায়ক, তাহলে কেন বলে এটা আগুন ই না। ব্যাপারটা উপেক্ষা করলেও আবার চাঁদ, কিংবা নরওয়ে-এর মত সৌন্দর্য কেন হার মানে তাহার কাছে? প্রশ্ন করলাম সৌন্দর্যকে, বলে তাহাকে তোমার জন্য বিশেষ উপায়ে বানানো হইয়াছে সুতরাং তাহাকেই দেখো আমাদেরকে নয়। কথাটা তাঁর মতই বলল, সব সৌন্দর্য এক নায়ের মাঝি। প্রশ্ন এবার নিজের কাছে দৌড়ে এলো, ব্যাপারটা বোঝাতে পারি নাই, কেমন সেই অনুভুতি, আচ্ছা যারা আমাকে পাল্টা প্রশ্ন করলো, আমিও শেষ প্রশ্ন করতে চাই, যে অনুভুতি কখনও অনুভব করিই নাই, সেটার নাম পর্যন্ত জানি না, হ্যাঁ শুধু বুকে আর বুকের ভিতর থাকা হৃদয়ে ব্যথা অনুভব হয়, তাহলে কিভাবে বুঝাবো? দুনিয়ার সব চমৎকার চমৎকার চক্ষু শীতল কারী জিনিষ গুলোকে ব্যাখ্যা করলে তারা একই কথা বলে, তাহলে কোথায় পাবো সেই আগুন নেভানোর উপায়। তাহার কাছে যেতে ভয় করে যদি রাগ করে তাড়িয়ে দেয়, আম আর বস্তা দুইটাই যাবে। থাকি আগুন নিয়ে যতদিন পুড়ে হৃদয়টা কয়লা না হয়ে যায় । এই আগুন যতটা কষ্ট দেয়, তাঁর থেকে তিনটা মিল্কিওয়ে গ্যালাক্সির সমান ভালো লাগা অনুভব হয়। ব্যাপারটা অতিরিক্ত বানোয়াট মোহ প্রকাশ বা প্রেম আবেগ বোঝানো মনে হচ্ছে তাই না? তাহলে স্বাভাবিক বিবেকে বলি?
+সুস্থ বিবেকে কিছু বলার নেই শুধু এতটুকু বলার সামর্থ্য আছে যে, তুমি ……………………! আমার প্রশান্তি!
+</p>
+  </div>
+  <script>
+    // Entry typing effect with blinking cursor; splits by Bangla danda '।', '!' and '?'
+    (function() {
+      function typeSentencesWithCursor(containerSelector, typingDelay, paragraphDelay) {
+        var container = document.querySelector(containerSelector);
+        if (!container) return;
+
+        var originalText = (container.textContent || '').replace(/\s+/g, ' ').trim();
+        if (!originalText) return;
+
+        // Split into sentences using Bangla danda and common enders
+        var sentences = [];
+        var buffer = '';
+        for (var i = 0; i < originalText.length; i++) {
+          var ch = originalText[i];
+          buffer += ch;
+          if (ch === '।' || ch === '!' || ch === '?') {
+            var s = buffer.trim();
+            if (s) sentences.push(s);
+            buffer = '';
+          }
+        }
+        if (buffer.trim()) sentences.push(buffer.trim());
+
+        var parent = container.parentElement;
+        if (!parent) return;
+        parent.innerHTML = '';
+
+        var cursor = document.createElement('span');
+        cursor.className = 'cursor';
+
+        var currentParagraph = document.createElement('p');
+        parent.appendChild(currentParagraph);
+        currentParagraph.appendChild(cursor);
+
+        var sentenceIndex = 0;
+        var charIndex = 0;
+
+        function step() {
+          if (sentenceIndex >= sentences.length) return;
+          var currentSentence = sentences[sentenceIndex];
+          if (charIndex < currentSentence.length) {
+            var ch = currentSentence.charAt(charIndex++);
+            cursor.before(document.createTextNode(ch));
+            setTimeout(step, typingDelay);
+          } else {
+            sentenceIndex++;
+            charIndex = 0;
+            if (sentenceIndex < sentences.length) {
+              var nextP = document.createElement('p');
+              parent.appendChild(nextP);
+              currentParagraph = nextP;
+              currentParagraph.appendChild(cursor);
+              setTimeout(step, paragraphDelay);
+            }
+          }
+        }
+
+        step();
+      }
+
+      function init() {
+        // typingDelay per character, paragraphDelay between sentences
+        typeSentencesWithCursor('.content p', 28, 220);
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
+    })();
+  </script>
+  </body>
+  </html>
+
+
+
