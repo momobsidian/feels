@@ -2,11 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Text Feels</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     @font-face {
       font-family: 'CustomFont';
@@ -18,24 +15,37 @@
 
     html, body {
       height: 100%;
+      height: 100dvh; /* Dynamic viewport height - modern approach */
       margin: 0;
+      overflow: hidden;
     }
 
     body {
       background: #000000;
       color: #ffffff;
-      font-family: 'CustomFont';
+      font-family: 'CustomFont', sans-serif;
       font-size: 20px;
-      min-height: 100vh;
       background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('image.jpg?v=3');
-      background-size: 100% auto; /* fit width */
+      background-size: auto 100%;
       background-repeat: no-repeat;
-      background-position: center top;
+      background-position: 65% center;
       background-attachment: fixed;
-      overflow-y: auto;
     }
   
-    .content { padding: 16px; box-sizing: border-box; }
+    .content { 
+      padding: max(16px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) max(16px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+      box-sizing: border-box;
+      height: 100dvh; /* Dynamic viewport height */
+      overflow-y: auto;
+      overflow-x: hidden;
+      -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* IE and Edge */
+    }
+    
+    .content::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, Opera */
+    }
     p { margin: 0 0 14px; color: #f7f7f7; }
     .content p:last-child { margin-bottom: 0; }
     @keyframes blink {
@@ -53,39 +63,44 @@
     }
     @media (max-width: 600px) { p { font-size: 18px; } }
   </style>
-  <!-- Ensure font.ttf is in the same directory as this file -->
-  <!-- If serving over a server, keep the relative path the same -->
-  
-  </head>
-  <body>
+</head>
+<body>
   <div class="content">
-    <p>৪ সেপ্টেম্বর ২০২৫, রাত ১০:৪৩:৪৫ এই চাহনি কতটা ভয়ংকর ……। যেন নিরব আগুন । এই মনটায় আগুনটা স্পর্শ করলো । -১০০ ডিগ্রির তাপমাত্রার বরফ দেয়া মাত্রই ০.১০০ সেকেন্ড এই বরফ উধাউ। বরফকে জিজ্ঞাস করলাম যাস কোথায়? বলে আমার সবচেয়ে  বেশি দেখা আগুন গুলোর মধ্যে এটাই সেরা। এটা কেমন আগুন আমি জানি না আমি আগুন নিভাই অজানা কিছু নয়, কি জ্বালা কওতো কেমনডা লাগে, আগুনের মত গরম, উত্তপ্ত, যন্ত্রনাদায়ক, তাহলে কেন বলে এটা আগুন ই না। ব্যাপারটা উপেক্ষা করলেও আবার চাঁদ, কিংবা নরওয়ে-এর মত সৌন্দর্য কেন হার মানে তাহার কাছে? প্রশ্ন করলাম সৌন্দর্যকে, বলে তাহাকে তোমার জন্য বিশেষ উপায়ে বানানো হইয়াছে সুতরাং তাহাকেই দেখো আমাদেরকে নয়। কথাটা তাঁর মতই বলল, সব সৌন্দর্য এক নায়ের মাঝি। প্রশ্ন এবার নিজের কাছে দৌড়ে এলো, ব্যাপারটা বোঝাতে পারি নাই, কেমন সেই অনুভুতি, আচ্ছা যারা আমাকে পাল্টা প্রশ্ন করলো, আমিও শেষ প্রশ্ন করতে চাই, যে অনুভুতি কখনও অনুভব করিই নাই, সেটার নাম পর্যন্ত জানি না, হ্যাঁ শুধু বুকে আর বুকের ভিতর থাকা হৃদয়ে ব্যথা অনুভব হয়, তাহলে কিভাবে বুঝাবো? দুনিয়ার সব চমৎকার চমৎকার চক্ষু শীতল কারী জিনিষ গুলোকে ব্যাখ্যা করলে তারা একই কথা বলে, তাহলে কোথায় পাবো সেই আগুন নেভানোর উপায়। তাহার কাছে যেতে ভয় করে যদি রাগ করে তাড়িয়ে দেয়, আম আর বস্তা দুইটাই যাবে। থাকি আগুন নিয়ে যতদিন পুড়ে হৃদয়টা কয়লা না হয়ে যায় । এই আগুন যতটা কষ্ট দেয়, তাঁর থেকে তিনটা মিল্কিওয়ে গ্যালাক্সির সমান ভালো লাগা অনুভব হয়। ব্যাপারটা অতিরিক্ত বানোয়াট মোহ প্রকাশ বা প্রেম আবেগ বোঝানো মনে হচ্ছে তাই না? তাহলে স্বাভাবিক বিবেকে বলি?
-সুস্থ বিবেকে কিছু বলার নেই শুধু এতটুকু বলার সামর্থ্য আছে যে, তুমি ……………………! আমার প্রশান্তি!
-</p>
+    <p id="text-content">Loading...</p>
   </div>
   <script>
     // Entry typing effect with blinking cursor; splits by Bangla danda '।', '!' and '?'
     (function() {
-      function typeSentencesWithCursor(containerSelector, typingDelay, paragraphDelay) {
+      function typeSentencesWithCursor(containerSelector, typingDelay, paragraphDelay, text) {
         var container = document.querySelector(containerSelector);
         if (!container) return;
 
-        var originalText = (container.textContent || '').replace(/\s+/g, ' ').trim();
-        if (!originalText) return;
-
-        // Split into sentences using Bangla danda and common enders
-        var sentences = [];
-        var buffer = '';
-        for (var i = 0; i < originalText.length; i++) {
-          var ch = originalText[i];
-          buffer += ch;
-          if (ch === '।' || ch === '!' || ch === '?') {
-            var s = buffer.trim();
-            if (s) sentences.push(s);
-            buffer = '';
+        // Handle \n\n as paragraph breaks
+        var paragraphs = text.split('\n\n');
+        var allSentences = [];
+        
+        paragraphs.forEach(function(para) {
+          var originalText = para.replace(/\s+/g, ' ').trim();
+          if (!originalText) return;
+          
+          // Split into sentences using Bangla danda and common enders
+          var sentences = [];
+          var buffer = '';
+          for (var i = 0; i < originalText.length; i++) {
+            var ch = originalText[i];
+            buffer += ch;
+            if (ch === '।' || ch === '!' || ch === '?') {
+              var s = buffer.trim();
+              if (s) sentences.push(s);
+              buffer = '';
+            }
           }
-        }
-        if (buffer.trim()) sentences.push(buffer.trim());
+          if (buffer.trim()) sentences.push(buffer.trim());
+          
+          if (sentences.length > 0) {
+            allSentences.push({ type: 'paragraph', sentences: sentences });
+          }
+        });
 
         var parent = container.parentElement;
         if (!parent) return;
@@ -98,12 +113,16 @@
         parent.appendChild(currentParagraph);
         currentParagraph.appendChild(cursor);
 
+        var paraIndex = 0;
         var sentenceIndex = 0;
         var charIndex = 0;
 
         function step() {
-          if (sentenceIndex >= sentences.length) return;
-          var currentSentence = sentences[sentenceIndex];
+          if (paraIndex >= allSentences.length) return;
+          
+          var currentPara = allSentences[paraIndex];
+          var currentSentence = currentPara.sentences[sentenceIndex];
+          
           if (charIndex < currentSentence.length) {
             var ch = currentSentence.charAt(charIndex++);
             cursor.before(document.createTextNode(ch));
@@ -111,12 +130,28 @@
           } else {
             sentenceIndex++;
             charIndex = 0;
-            if (sentenceIndex < sentences.length) {
+            
+            if (sentenceIndex < currentPara.sentences.length) {
+              // Next sentence in same paragraph
               var nextP = document.createElement('p');
               parent.appendChild(nextP);
               currentParagraph = nextP;
               currentParagraph.appendChild(cursor);
               setTimeout(step, paragraphDelay);
+            } else {
+              // Move to next paragraph
+              paraIndex++;
+              sentenceIndex = 0;
+              
+              if (paraIndex < allSentences.length) {
+                // Add extra spacing for new paragraph
+                var nextP = document.createElement('p');
+                nextP.style.marginTop = '20px';
+                parent.appendChild(nextP);
+                currentParagraph = nextP;
+                currentParagraph.appendChild(cursor);
+                setTimeout(step, paragraphDelay * 2);
+              }
             }
           }
         }
@@ -125,8 +160,17 @@
       }
 
       function init() {
-        // typingDelay per character, paragraphDelay between sentences
-        typeSentencesWithCursor('.content p', 28, 220);
+        // Fetch content from JSON file
+        fetch('/content.json')
+          .then(response => response.json())
+          .then(data => {
+            // typingDelay per character, paragraphDelay between sentences
+            typeSentencesWithCursor('#text-content', 14, 110, data.text);
+          })
+          .catch(error => {
+            console.error('Error loading content:', error);
+            document.querySelector('#text-content').textContent = 'Failed to load content.';
+          });
       }
 
       if (document.readyState === 'loading') {
@@ -136,8 +180,5 @@
       }
     })();
   </script>
-  </body>
-  </html>
-
-
-
+</body>
+</html>

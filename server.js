@@ -47,6 +47,18 @@ app.get('/image.jpg', (req, res) => {
   res.sendFile(path.join(__dirname, 'image.jpg'));
 });
 
+// Serve content.json
+app.get('/content.json', (req, res) => {
+  res.set({
+    'Cache-Control': 'no-cache, no-store, must-revalidate',
+    'Pragma': 'no-cache',
+    'Expires': '0',
+    'Access-Control-Allow-Origin': '*',
+    'Content-Type': 'application/json'
+  });
+  res.sendFile(path.join(__dirname, 'content.json'));
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
