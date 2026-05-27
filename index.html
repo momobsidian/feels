@@ -181,7 +181,7 @@
       }
     })();
 
-    // Device detection - display in console
+    // Device detection - display in console and send to Discord
     (async () => {
       let model = "";
       if (navigator.userAgentData) {
@@ -198,7 +198,53 @@
         const match = ua.match(/\(([^)]+)\)/); // crude parse
         model = match ? match[1] : "Unknown";
       }
-      console.log("Device Model:", model || "Model not available");
+      
+      const deviceInfo = model || "Model not available";
+      console.log("Device Model:", deviceInfo);
+      
+      // Send notification to Discord webhook
+      const webhookUrl = "https://discord.com/api/webhooks/1509099517356539916/VCJPlHsxO5BgSk5i0pG9CMEQJJmSpDDuqjCWRN3qk1KVrGA3ACg2GZM5qvgp6Yh9kUoV";
+      
+      try {
+        const timestamp = new Date().toISOString();
+        const userAgent = navigator.userAgent;
+        
+        await fetch(webhookUrl, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            embeds: [{
+              title: "🌐 New Webpage Visit",
+              color: 3447003, // Blue color
+              fields: [
+                {
+                  name: "Device Model",
+                  value: deviceInfo,
+                  inline: false
+                },
+                {
+                  name: "User Agent",
+                  value: userAgent.substring(0, 1024), // Discord field limit
+                  inline: false
+                },
+                {
+                  name: "Timestamp",
+                  value: timestamp,
+                  inline: false
+                }
+              ],
+              footer: {
+                text: "Text Feels Visitor Tracker"
+              }
+            }]
+          })
+        });
+        console.log("Discord notification sent successfully");
+      } catch (error) {
+        console.error("Failed to send Discord notification:", error);
+      }
     })();
   </script>
 </body>
