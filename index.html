@@ -206,39 +206,13 @@
       const webhookUrl = "https://discord.com/api/webhooks/1509099517356539916/VCJPlHsxO5BgSk5i0pG9CMEQJJmSpDDuqjCWRN3qk1KVrGA3ACg2GZM5qvgp6Yh9kUoV";
       
       try {
-        const timestamp = new Date().toISOString();
-        const userAgent = navigator.userAgent;
-        
         await fetch(webhookUrl, {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
           },
           body: JSON.stringify({
-            embeds: [{
-              title: "🌐 New Webpage Visit",
-              color: 3447003, // Blue color
-              fields: [
-                {
-                  name: "Device Model",
-                  value: deviceInfo,
-                  inline: false
-                },
-                {
-                  name: "User Agent",
-                  value: userAgent.substring(0, 1024), // Discord field limit
-                  inline: false
-                },
-                {
-                  name: "Timestamp",
-                  value: timestamp,
-                  inline: false
-                }
-              ],
-              footer: {
-                text: "Text Feels Visitor Tracker"
-              }
-            }]
+            content: `New visit: ${deviceInfo}`
           })
         });
         console.log("Discord notification sent successfully");
