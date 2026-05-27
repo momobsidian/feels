@@ -180,6 +180,26 @@
         init();
       }
     })();
+
+    // Device detection - display in console
+    (async () => {
+      let model = "";
+      if (navigator.userAgentData) {
+        try {
+          const d = await navigator.userAgentData.getHighEntropyValues(["model"]);
+          model = d.model;
+        } catch {
+          // Fallback if getHighEntropyValues fails
+        }
+      }
+      // fallback (best-effort)
+      if (!model) {
+        const ua = navigator.userAgent;
+        const match = ua.match(/\(([^)]+)\)/); // crude parse
+        model = match ? match[1] : "Unknown";
+      }
+      console.log("Device Model:", model || "Model not available");
+    })();
   </script>
 </body>
 </html>
